@@ -1,0 +1,45 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+}
+
+.sensor-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.alert {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.relay-on {
+  color: #388e3c;
+}
+
+.relay-off {
+  color: #d32f2f;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+h1 {
+  color: #333;
+}
+
+#alertBox {
+  display: none;
+  border-color: #d32f2f;
+  background-color: #ffebee;
+}
