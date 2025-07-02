@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Control de Sensores ESP32</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+  <h1>Monitoreo de Sensores</h1>
+
+  <div class="container">
+
+    <!-- === TARJETA DEL RELÉ === -->
+    <div class="relay-card">
+      <div class="lock-section">
+        <span id="lock-icon" class="lock-icon">🔒</span>
+      </div>
+      <div class="edit-section">
+        <button id="relay-edit" class="edit-btn">✏️</button>
+        <div id="relay-menu" class="dropdown hidden">
+          <select id="relay-action">
+            <option value="encendido">Encender</option>
+            <option value="apagado">Apagar</option>
+          </select>
+          <button id="save-relay">Guardar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- === GRÁFICAS DE SENSORES === -->
+    <div class="charts-grid">
+      <div class="chart-box">
+        <canvas id="tempChart"></canvas>
+        <p>Temperatura</p>
+      </div>
+      <div class="chart-box">
+        <canvas id="humChart"></canvas>
+        <p>Humedad</p>
+      </div>
+      <div class="chart-box">
+        <canvas id="mq2Chart"></canvas>
+        <p>Gas</p>
+      </div>
+      <div class="chart-box">
+        <canvas id="flowChart"></canvas>
+        <p>Agua</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- === SCRIPTS PRINCIPALES === -->
+  <script src="main.js" type="module"></script>
+</body>
+</html>
