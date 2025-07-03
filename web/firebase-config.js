@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-database.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-firestore.js";
 
 // Configuración de Firebase
 const firebaseConfig = {
@@ -15,5 +16,8 @@ const firebaseConfig = {
 // Inicializar Firebase
 export const app = initializeApp(firebaseConfig);
 
-// Inicializar Realtime Database
+// Realtime (solo sensores)
 export const dbRealtime = getDatabase(app);
+
+// Firestore (usuarios, contratos, pagos, fechas)
+export const dbFirestore = getFirestore(app);

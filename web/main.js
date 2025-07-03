@@ -4,6 +4,7 @@ import { ref, onValue, set } from 'https://www.gstatic.com/firebasejs/11.8.0/fir
 
 // === CREAR CHART DONUT ===
 function createDonutChart(ctx, label, colorFn) {
+  
   return new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -98,3 +99,5 @@ function updateLockUI(state) {
   const icon = document.getElementById('lock-icon');
   icon.textContent = state === 'encendido' ? '🔓' : '🔒';
 }
+
+console.log('Dashboard cargado correctamente');

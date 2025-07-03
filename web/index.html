@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Control de Sensores ESP32</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 </head>
+
 <body>
   <h1>Monitoreo de Sensores</h1>
+
+  <a href="formulario.html" class="btn-formulario">Formulario</a>
 
   <div class="container">
 
@@ -45,14 +49,18 @@
         <p>Gas</p>
       </div>
       <div class="chart-box">
-        <canvas id="flowChart"></canvas>
+        <canvas id="flowChar"></canvas>
         <p>Agua</p>
       </div>
     </div>
 
   </div>
-
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.7530020682184!2d-99.47929881513122!3d19.336521453569734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdf56de635af1b%3A0x3c6b1f74cbac3e3b!2sM%C3%A9dica%20Fratis!5e0!3m2!1ses!2smx!4v1751578907411!5m2!1ses!2smx"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
   <!-- === SCRIPTS PRINCIPALES === -->
   <script src="main.js" type="module"></script>
 </body>
+
 </html>

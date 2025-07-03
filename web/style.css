@@ -1,124 +1,114 @@
-/* === ESTILO GLOBAL === */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0d1117;
-  color: #e6edf3;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 20px;
+  background-color: #121212;
+  color: #fff;
   text-align: center;
 }
 
 h1 {
-  font-size: 2em;
   margin-bottom: 30px;
+  font-size: 2em;
 }
 
-/* === CONTENEDOR GENERAL === */
 .container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   align-items: center;
+  gap: 40px;
 }
 
-/* === TARJETA DEL RELÉ === */
+/* === Tarjeta del Relé === */
 .relay-card {
   display: flex;
-  background-color: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 12px;
-  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  padding: 20px 30px;
   width: 400px;
-  max-width: 90%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 12px rgba(0, 255, 128, 0.3);
 }
 
 .lock-section {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-size: 3rem;
-  background-color: #21262d;
 }
 
 .edit-section {
-  flex: 1;
-  padding: 20px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .edit-btn {
-  background: #238636;
-  color: #fff;
+  background: none;
   border: none;
-  padding: 10px 14px;
-  border-radius: 6px;
-  font-size: 1.2em;
+  color: #fff;
+  font-size: 1.5rem;
   cursor: pointer;
-  transition: background 0.3s;
-}
-
-.edit-btn:hover {
-  background: #2ea043;
 }
 
 .dropdown {
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .hidden {
   display: none;
 }
 
-select {
-  padding: 8px;
-  font-size: 1em;
+.dropdown select,
+.dropdown button {
+  padding: 6px 12px;
+  font-size: 1rem;
   border-radius: 6px;
-  border: 1px solid #30363d;
-  background-color: #0d1117;
-  color: #e6edf3;
-}
-
-button#save-relay {
-  background-color: #1f6feb;
-  color: white;
   border: none;
-  padding: 10px;
-  border-radius: 6px;
+}
+
+.dropdown button {
+  background-color: #00c853;
+  color: #fff;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
-button#save-relay:hover {
-  background-color: #388bfd;
-}
-
-/* === GRÁFICAS === */
+/* === Cuadrícula de Gráficas === */
 .charts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 30px;
-  justify-content: center;
+  width: 100%;
+  max-width: 800px;
 }
 
 .chart-box {
-  background-color: #161b22;
+  background-color: #1f1f1f;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1), 0 0 25px rgba(0, 255, 255, 0.05) inset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.chart-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 35px rgba(0, 255, 255, 0.1) inset;
+}
+
+canvas {
+  max-width: 140px;
+  max-height: 140px;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.3));
 }
 
 .chart-box p {
   margin-top: 10px;
   font-weight: bold;
-  color: #58a6ff;
-}
-
-canvas {
-  width: 100% !important;
-  height: auto !important;
+  font-size: 1rem;
+  color: #00e5ff;
+  text-shadow: 0 0 4px rgba(0, 229, 255, 0.4);
 }
